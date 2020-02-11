@@ -1,0 +1,126 @@
+.hero {
+    display: grid;
+    grid-template-rows: [header-start] 10vh [header-end] 1fr [gallery-end];
+    font-size: 1.5rem;
+
+
+    .header {
+        grid-row: header-start / header-end;
+        grid-column: 1 / -1;
+
+        position: relative;
+        z-index: 20;
+        color: #fdfdfd;
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+
+            padding: 0 2rem;
+            margin-top: 3rem;
+            background-color: #00000060;
+            border-radius: 5rem;
+
+
+            &__logo {
+                display: grid;
+                grid-template-columns: max-content 1fr;
+                gap: 1rem;
+                align-items: center;
+
+                img {
+                    height: 6rem;
+                }
+            }
+        }
+    }
+
+
+
+    span {
+        justify-self: center;
+    }
+
+    &__slides {
+        grid-row: header-start / gallery-end;
+        grid-column: 1 / -1;
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    &__slide {
+        position: relative;
+        flex: 1;
+        transition: 0.5s ease-in-out;
+        height: 100%;
+        width: 100%;
+
+        &:nth-child(1) {
+            background: url(../img/heading-1.jpg);
+            background-position: center;
+            background-size: cover;
+            flex: 3;
+        }
+
+        &:nth-child(2) {
+            background: url(../img/heading-2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &:nth-child(3) {
+            background: url(../img/heading-3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &:nth-child(4) {
+            background: url(../img/heading-4.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__content {
+            display: grid;
+            grid-template-rows: repeat(2, max-content);
+            row-gap: 2.5rem;
+            position: absolute;
+            padding: 1rem;
+            bottom: 30%;
+            left: 15%;
+            width: min-content;
+            line-height: 4rem;
+            background: #00000080;
+            border-radius: 3px;
+            color: #fdfdfd;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0s;
+            transform: translateY(100px);
+
+            button {
+                justify-self: start;
+            }
+        }
+
+        &:hover {
+            flex-grow: 5;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+            .hero__slide__content {
+                visibility: visible;
+                opacity: 1;
+                transition: 0.5s;
+                transition-delay: 0.5s;
+                transform: translateY(0);
+
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,25 @@
+.section {
+    padding: 0 10rem;
+    max-width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: [hero-start]90vh[hero-end divider-start] 20vh [divider-end gallery-start] max-content [gallery-end footer-start] 30vh [footer-end];
+}
+
+.hero {
+    grid-row: hero-start / hero-end;
+}
+
+.divider {
+    grid-row: divider-start / divider-end;
+}
+
+.gallery {
+    grid-row: gallery-start / gallery-end;
+}
+
+.footer {
+    grid-row: footer-start / footer-end;
+}
