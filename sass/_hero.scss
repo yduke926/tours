@@ -33,6 +33,31 @@
                     height: 6rem;
                 }
             }
+
+            .search-bar {
+                width: 30%;
+                background-color: #00000060;
+                border-radius: 30px;
+                padding: .5rem 1rem;
+
+                display: flex;
+                justify-content: end;
+                transition: 0.3s all;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fdfdfd91;
+                }
+
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                    fill: #fdfdfd;
+                    justify-items: flex-end;
+
+                }
+            }
         }
     }
 
