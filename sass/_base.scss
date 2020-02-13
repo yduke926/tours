@@ -56,12 +56,20 @@ button {
     align-content: center;
     justify-items: center;
 
+    &__set {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        align-items: center;
+
+        column-gap: .5rem;
+
+    }
+
     &__icon {
         fill: currentColor;
         width: 1.5rem;
         height: 1.5rem;
         padding-right: .5rem;
-        transform: translateY(.5rem);
     }
 
     &--white {

@@ -5,7 +5,7 @@
 
 body {
     display: grid;
-    grid-template-rows: [hero-start]90vh[hero-end divider-start] 8vh [divider-end gallery-start] 1fr [gallery-end footer-start] 40vh [footer-end];
+    grid-template-rows: [hero-start]90vh[hero-end divider-start] 8vh [divider-end gallery-start] 1fr [gallery-end footer-start] max-content [footer-end];
 }
 
 .hero {
