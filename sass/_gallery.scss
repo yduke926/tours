@@ -1,0 +1,44 @@
+.gallery {
+    display: grid;
+    grid-template-rows: max-content 10%;
+    grid-template-columns: 20vw 1fr 20vw;
+
+    padding: 5rem 0;
+
+
+    &__images {
+        grid-column: 2 / 3;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 35rem);
+
+        gap: 2rem;
+    }
+
+    button {
+        grid-column: 2 / 3;
+        grid-row: 2 / -1;
+
+        justify-self: center;
+        align-self: center;
+        padding: 1.5rem 5rem;
+        color: #fdfdfd;
+        background-color: $color-teal-dark;
+        border: none;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $color-teal-light;
+        }
+
+        cursor: pointer;
+
+        svg {
+            fill: currentColor;
+            transform: translateY(.4rem);
+
+
+        }
+    }
+}
