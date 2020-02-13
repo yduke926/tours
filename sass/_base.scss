@@ -13,6 +13,15 @@ html {
     margin: 0;
 }
 
+//VARIABLES
+$color-grey-light: #fdfdfd91;
+$color-grey-med: #ddddddd0;
+$color-black: rgb(20, 20, 20);
+$color-black-transparent: #00000060;
+$color-teal-light:rgb(30, 152, 168);
+$color-teal-dark:rgb(9, 90, 100);
+$box-shadow-small: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+
 img {
     width: 7rem;
     height: 9rem;
@@ -31,7 +40,7 @@ li {
 }
 
 li:hover {
-    color: rgb(20, 20, 20);
+    color: $color-black;
 }
 
 button {
@@ -46,13 +55,20 @@ button {
     align-content: center;
     justify-items: center;
 
+    &__icon {
+        fill: currentColor;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding-right: .5rem;
+        transform: translateY(.5rem);
+    }
 
     &--white {
         color: #fdfdfd;
     }
 
     &--blue {
-        background-color: rgb(30, 152, 168);
+        background-color: $color-teal-light;
         border-radius: 30px;
         padding: .5rem 2rem;
         letter-spacing: 1.2px;
@@ -60,7 +76,7 @@ button {
         transition: all .3s;
 
         &:hover {
-            background-color: rgb(9, 90, 100);
+            background-color: $color-teal-dark;
         }
     }
 }

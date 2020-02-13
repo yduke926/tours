@@ -19,7 +19,7 @@
 
             padding: 0 2rem;
             margin-top: 3rem;
-            background-color: #00000060;
+            background-color: $color-black-transparent;
             border-radius: 5rem;
 
 
@@ -36,7 +36,7 @@
 
             .search-bar {
                 width: 30%;
-                background-color: #00000060;
+                background-color: $color-black-transparent;
                 border-radius: 30px;
                 padding: .5rem 1rem;
 
@@ -46,7 +46,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #fdfdfd91;
+                    background-color: $color-grey-light;
                 }
 
 
@@ -74,7 +74,6 @@
         z-index: 1;
 
         display: flex;
-        box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.4);
     }
 
     &__slide {
@@ -134,7 +133,6 @@
 
         &:hover {
             flex-grow: 5;
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 
             .hero__slide__content {
                 visibility: visible;
@@ -147,5 +145,50 @@
         }
 
 
+    }
+}
+
+.divider {
+    background-color: $color-grey-med;
+    box-shadow: $box-shadow-small;
+
+    display: grid;
+    grid-template-columns: 40vw 10%;
+    justify-content: space-between;
+    padding: 0 6rem;
+
+    text-transform: uppercase;
+
+
+    .links {
+        grid-column: 1 / 2;
+
+        &--1 {
+            color: rgb(248, 97, 42);
+        }
+
+        &--2 {
+            color: rgb(46, 153, 32);
+        }
+
+        &--3 {
+            color: $color-teal-light;
+        }
+    }
+
+    &__dates {
+        grid-column: 2 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        :nth-child(1) {
+            border: 2px solid currentColor;
+            border-radius: 5rem;
+            padding: .3rem 1.5rem;
+
+        }
     }
 }
