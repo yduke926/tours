@@ -14,7 +14,7 @@
 
         &__content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 2fr max-content 1fr;
             align-items: center;
 
             padding: 0 2rem;
@@ -36,7 +36,7 @@
             }
 
             .search-bar {
-                width: 30%;
+                width: 80%;
                 background-color: $color-black-transparent;
                 border-radius: 30px;
                 padding: .5rem 1rem;
@@ -183,6 +183,7 @@
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        column-gap: .5rem;
         align-items: center;
         justify-items: center;
 

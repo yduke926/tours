@@ -13,14 +13,19 @@ html {
     margin: 0;
 }
 
-//VARIABLES
+// COLOR VARIABLES
 $color-grey-light: #fdfdfd91;
 $color-grey-med: #ddddddd0;
 $color-black: rgb(20, 20, 20);
 $color-black-transparent: #00000060;
 $color-teal-light:rgb(30, 152, 168);
 $color-teal-dark:rgb(9, 90, 100);
+
 $box-shadow-small: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+
+// MEDIA QUERY VARIABLES
+$bp-large: 75em; //1200px
+$bp-medium: 43.75em; //700px
 
 img {
     width: 100%;
