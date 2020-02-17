@@ -4,6 +4,7 @@
     font-size: 1.5rem;
 
 
+
     .header {
         grid-row: header-start / header-end;
         grid-column: 1 / -1;
@@ -11,11 +12,15 @@
         position: relative;
         z-index: 20;
         color: #fdfdfd;
+        justify-self: center;
 
         @media screen and (max-width: $bp-large) {
             padding: 0 1rem;
         }
 
+        @media screen and (max-width: $bp-small) {
+            padding: 0;
+        }
 
 
         &__content {
