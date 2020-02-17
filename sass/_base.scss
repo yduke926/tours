@@ -4,7 +4,9 @@ html {
     box-sizing: border-box;
     background-color: #fdfdfd;
     overflow-x: hidden;
+
 }
+
 
 *,
 *::before,
@@ -25,8 +27,8 @@ $box-shadow-small: 0 0 5px 1px rgba(0, 0, 0, 0.4);
 
 // MEDIA QUERY VARIABLES
 $bp-large: 75em; //1200px
-// $bp-medium: 43.75em; //700px 
 $bp-medium: 37.5em; //600px 
+$bp-small: 25em; //400px 
 
 img {
     width: 100%;
@@ -98,4 +100,5 @@ button {
             background-color: $color-teal-dark;
         }
     }
+
 }

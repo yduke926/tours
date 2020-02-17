@@ -164,6 +164,11 @@
             transform: translateY(100px);
 
             @media screen and (max-width: $bp-medium) {
+                left: 5%;
+                overflow-x: hidden;
+            }
+
+            @media screen and (max-width: $bp-small) {
                 left: 0;
             }
 
