@@ -163,6 +163,10 @@
             transition: 0s;
             transform: translateY(100px);
 
+            @media screen and (max-width: $bp-medium) {
+                left: 0;
+            }
+
             button {
                 justify-self: start;
             }
