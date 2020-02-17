@@ -12,16 +12,36 @@
         z-index: 20;
         color: #fdfdfd;
 
+        @media screen and (max-width: $bp-large) {
+            padding: 0 1rem;
+        }
+
+
+
         &__content {
             display: grid;
             grid-template-columns: 1fr 2fr max-content 1fr;
+            column-gap: 1rem;
             align-items: center;
 
             padding: 0 2rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
             background-color: $color-black-transparent;
             border-radius: 5rem;
 
+            @media screen and (max-width: $bp-medium) {
+                grid-template-columns: 1fr max-content 20%;
+
+                li {
+                    display: none;
+                }
+
+                span {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / -1;
+                }
+
+            }
 
             &__logo {
                 display: grid;
@@ -32,6 +52,10 @@
                 img {
                     height: 6rem;
                     width: 6rem;
+                }
+
+                @media screen and (max-width: $bp-medium) {
+                    grid-column: 1 / 2;
                 }
             }
 
@@ -58,6 +82,12 @@
                     justify-items: flex-end;
 
                 }
+
+                @media screen and (max-width: $bp-medium) {
+                    grid-column: 3 / -1;
+                    grid-row: 1 / -1;
+                }
+
             }
         }
     }
@@ -84,11 +114,17 @@
         height: 100%;
         width: 100%;
 
+        display: grid;
+
         &:nth-child(1) {
             background: url(../img/heading-1.jpg);
             background-position: center;
             background-size: cover;
             flex: 3;
+
+            @media screen and (max-width: $bp-medium) {
+                flex: 1;
+            }
         }
 
         &:nth-child(2) {
@@ -154,11 +190,17 @@
     box-shadow: $box-shadow-small;
 
     display: grid;
-    grid-template-columns: 40vw 10%;
+    grid-template-columns: 45vw 10%;
     justify-content: space-between;
     padding: 0 6rem;
 
     text-transform: uppercase;
+
+    @media screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr max-content;
+        column-gap: 1rem;
+        padding: 0;
+    }
 
 
     .links {
@@ -183,7 +225,7 @@
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: .5rem;
+        column-gap: 1rem;
         align-items: center;
         justify-items: center;
 
@@ -192,6 +234,11 @@
             border-radius: 5rem;
             padding: .3rem 1.5rem;
 
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            column-gap: .5rem;
+            padding-right: 2rem;
         }
     }
 }
